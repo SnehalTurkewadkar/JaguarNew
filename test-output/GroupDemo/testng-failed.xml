@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [GroupDemo]" guice-stage="DEVELOPMENT">
+  <parameter name="responseCodes" value="200,201,202"/>
+  <parameter name="browser" value="edge"/>
+  <parameter name="env" value="QAServer"/>
+  <test thread-count="5" name="GroupsTest(failed)">
+    <groups>
+      <run>
+        <include name="allVehicles"/>
+      </run>
+    </groups>
+    <classes>
+      <class name="day17June2023.GroupDemo2">
+        <methods>
+          <include name="testBenz"/>
+        </methods>
+      </class> <!-- day17June2023.GroupDemo2 -->
+    </classes>
+  </test> <!-- GroupsTest(failed) -->
+</suite> <!-- Failed suite [GroupDemo] -->
